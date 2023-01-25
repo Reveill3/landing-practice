@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.title {
+    @apply text-5xl; 
+    font-weight: 700;
+}
+
+.subtitle {
+    @apply text-2xl;
+    font-weight: 700;
+}
+
+.sectionTitle {
+    @apply text-xl;
+    font-weight: 600;
+}
+
+.paragraph {
+    @apply text-base;
+    font-weight: 500;
+}
+
+.caption {
+    @apply text-sm;
+    font-weight: 500;
+}
+
+.heroBackground {
+    background-image: url('images/hero-bg.jpg');
+}

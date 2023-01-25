@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
+import Styles from './pages/Styles';
 
 const Layout = () => {
   return (
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />,
       },
+      {
+        path: '/styles',
+        element: <Styles />,
+      }
     ],
   },
 ]);
