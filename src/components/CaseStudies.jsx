@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Button1 from './Button1';
+import Card1 from './Card1';
 
 const CaseStudies = () => {
   const ref = useRef(null);
@@ -17,6 +18,7 @@ const CaseStudies = () => {
   const y = useParallax(scrollYProgress, 100);
   return (
     <div className='relative px-100 py-40 bg-black/20' ref={ref}>
+    {/* Background */}
       <motion.div
         style={{ y }}
         className='h-full w-full absolute inset-x-0 top-0 mx-auto max-w-[2400] -z-10'
@@ -26,27 +28,42 @@ const CaseStudies = () => {
           src='https://res.cloudinary.com/dgplbptdj/image/upload/v1674702946/Round%20Table/case-bg_qrmc4z.png'
         />
       </motion.div>
-        <div className='flex items-center w-full h-[860px] gap-10 z-0 px-[100px]'>
-          {/* Card Stack left */}
-          <div className='flex flex-col gap-10 w-[300px] h-[600px]'>
-            {/* Card 1 */}
-            <div className=' w-full h-[300px] relative '>
-              <img
-                className='shadow1 h-full absolute top-0 object-cover rounded-tl-[30px] rounded-bl-[30px] rounded-br-[30px] z-0'
-                src='https://res.cloudinary.com/dgplbptdj/image/upload/v1674703502/Round%20Table/Case1_eujhmc.png'
+      {/* Content */}
+      <section className='flex flex-col items-center justify-center w-full h-[860px] gap-10 z-0 px-[100px]'>
+        <div className='flex flex-col w-full justify-center items-center gap-20 max-w-[700px]'>
+          <div className='flex flex-col gap-20 w-full md:flex-row'>
+              <Card1
+                image='https://res.cloudinary.com/dgplbptdj/image/upload/v1674703502/Round%20Table/Case1_eujhmc.png'
+                subTitle='Case 1'
+                roundedTopLeft
+                roundedBottomLeft
+                roundedBottomRight
               />
-              <div className="flex flex-col sectionTitle text-white backdrop-blur-sm items-center justify-center w-[300px] h-1/3 bg-black/60 rounded-[30px] absolute bottom-0 z-10">
 
-                Case 1
-              </div>
-              
-            </div>
+
+            <p className='flex text-white caption items-center text-center max-w-[100%] md:max-w-[50%]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius duis at consectetur lorem. Curabitur gravida arcu ac tortor dignissim convallis aenean. Egestas maecenas pharetra convallis posuere. Est ullamcorper eget nulla facilisi etiam dignissim diam quis.
+            </p>
           </div>
-        </div>
+          <div className='flex flex-col flex-col-reverse md:flex md:flex-row gap-20 w-full'>
+            <p className='flex text-white caption items-center text-center max-w-[100%] md:max-w-[50%]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius duis at consectetur lorem. Curabitur gravida arcu ac tortor dignissim convallis aenean. Egestas maecenas pharetra convallis posuere. Est ullamcorper eget nulla facilisi etiam dignissim diam quis.
+            </p>
+              <Card1
+                image='https://res.cloudinary.com/dgplbptdj/image/upload/v1674749179/Round%20Table/case2_v1ex9b.png'
+                subTitle='Case 2'
+                roundedTopLeft
+                roundedBottomLeft
+                roundedBottomRight
+              />
 
+
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 };
 
 export default CaseStudies;
-

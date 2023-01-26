@@ -5,7 +5,7 @@ import Button1 from './Button1';
 const NavBar = () => {
   return (
     <div className='fixed top-0 left-0 w-full flex bg-black/60 h-16 backdrop-blur-md py-3 px-[40px]  justify-between z-10'>
-      <div className='p-4 text-black flex items-center w-1/10'>
+      <div className='hidden p-4 text-black items-center w-1/10 md:flex'>
         <img
           width='125px'
           height='125px'
@@ -13,7 +13,10 @@ const NavBar = () => {
           className='rounded-full'
         />
       </div>
-      <div className='flex w-3/5 decoration-none items-center text-black justify-between'>
+      <div className="w-[44px] h-[44px]">
+        <div className="w-[22px] h-2px bg-white content-none">&nbsp</div>
+      </div>
+      <div className='hidden  w-3/5 decoration-none items-center text-black justify-between md:flex'>
           <motion.a
             className='p-3 rounded-md border-transparent w-[100px] text-center text-white'
             href='/'
