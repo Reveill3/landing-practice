@@ -29,7 +29,7 @@ const CaseStudies = () => {
         />
       </motion.div>
       {/* Content */}
-      <section className='flex flex-col items-center justify-center w-full h-[860px] gap-20 z-0 px-[100px]'>
+      <section className='flex flex-col items-center justify-center w-full h-[860px] gap-20 z-0 px-[40px] md-[100px]'>
         <div className='flex h-full max-h-[600px] flex-col w-full justify-center items-center gap-10 max-w-[700px]'>
           <div className='flex flex-col gap-10 w-full h-full md:flex-row'>
               <Card1

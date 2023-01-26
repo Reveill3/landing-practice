@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card1 = ({image, subTitle, height='300',roundedBottomLeft=false, roundedBottomRight=false, roundedTopLeft=false, roundedTopRight=false}) => {
   return (
-    <div className={`w-full h-[${height}px] relative`}>
+    <div className={`w-full h-[300px] relative`}>
     <img
       className={`shadow1 h-full w-full absolute top-0 object-cover ${roundedTopLeft ? 'rounded-tl-[30px]' : ''} ${roundedTopRight ? 'rounded-tr-[30px]' : ''} ${roundedBottomLeft ? 'rounded-bl-[30px]' : ''} ${roundedBottomRight ? 'rounded-br-[30px]' : ''} z-0`}
       src={image}
