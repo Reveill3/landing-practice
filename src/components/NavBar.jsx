@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Button1 from './Button1';
 
 const NavBar = () => {
   return (
-    <div className='fixed top-0 left-0 w-full flex bg-black/60 h-16 z-10 backdrop-blur-md'>
-      <div className='p-4 text-black flex items-center w-1/6'>
+    <div className='fixed top-0 left-0 w-full flex bg-black/60 h-16 backdrop-blur-md py-3 px-[40px]  justify-between z-10'>
+      <div className='p-4 text-black flex items-center w-1/10'>
         <img
           width='125px'
           height='125px'
@@ -12,9 +13,9 @@ const NavBar = () => {
           className='rounded-full'
         />
       </div>
-      <div className='flex w-3/4 decoration-none text-white items-center gap-5 text-black justify-around'>
+      <div className='flex w-3/5 decoration-none items-center text-black justify-between'>
           <motion.a
-            className='p-3  rounded-md border-transparent w-[100px] text-center'
+            className='p-3 rounded-md border-transparent w-[100px] text-center text-white'
             href='/'
             whileHover={{
               'background-color': 'rgba(0, 0, 0, 0.2)',
@@ -23,7 +24,7 @@ const NavBar = () => {
             }}
           >Home</motion.a>
           <motion.a
-            className='p-3 rounded-md border-transparent w-[100px] text-center'
+            className='p-3 rounded-md border-transparent w-[100px] text-center text-white'
             href='/'
             whileHover={{
               'background-color': 'rgba(0, 0, 0, 0.2)',
@@ -32,7 +33,7 @@ const NavBar = () => {
             }}
           >About</motion.a>
           <motion.a
-            className='p-3 rounded-md border-transparent w-[100px] text-center'
+            className='p-3 rounded-md border-transparent w-[100px] text-center text-white'
             href='/'
             whileHover={{
               'background-color': 'rgba(0, 0, 0, 0.2)',
@@ -41,6 +42,7 @@ const NavBar = () => {
             }}
           >Projects</motion.a>
       </div>
+      <Button1 />
     </div>
   );
 };

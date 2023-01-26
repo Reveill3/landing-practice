@@ -34,3 +34,11 @@ body {
 .heroBackground {
     background-image: url('images/hero-bg.png');
 }
+
+.case1 {
+    background-image: url('https://res.cloudinary.com/dgplbptdj/image/upload/v1674703502/Round%20Table/Case1_eujhmc.png');
+}
+
+.shadow1 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
