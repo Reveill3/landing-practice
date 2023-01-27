@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Button1 from './Button1';
 import HamburgerMenu from './HamburgerMenu';
 import { useNavigate } from 'react-router-dom';
+import SignUp from './SignUp';
 
 const variants = {
   rotate1: {
@@ -26,8 +27,13 @@ const variants = {
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [signUpOpen, setSignUpOpen] = React.useState(false);
 
   const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    setSignUpOpen(!signUpOpen);
+  };
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -68,7 +74,7 @@ const NavBar = () => {
         </div>
         <div className='hidden max-w-3/5 gap-20 decoration-none items-center text-black justify-between md:flex'>
           <motion.a
-            onClick={() => navigate('/newsletter')}
+            onClick={() => setSignUpOpen(!signUpOpen)}
             className='p-3 rounded-md border-transparent w-[100px] text-center text-white cursor-pointer'
             whileHover={{
               'background-color': 'rgba(0, 0, 0, 0.2)',
@@ -90,10 +96,12 @@ const NavBar = () => {
             About
           </motion.a>
         </div>
-        <Button1 />
+        <Button1 link='https://calendly.com/austin_devs/15-minute-consultation' text='Book A Call'
+        />
       </div>
       <AnimatePresence>
         {isOpen && <HamburgerMenu open={isOpen} />}
+        {signUpOpen && <SignUp open={signUpOpen} />}
       </AnimatePresence>
     </>
   );

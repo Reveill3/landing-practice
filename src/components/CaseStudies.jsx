@@ -17,7 +17,7 @@ const CaseStudies = () => {
 
   const y = useParallax(scrollYProgress, 100);
   return (
-    <div className='relative px-100 py-40 bg-black/40' ref={ref}>
+    <div className='relative px-100 py-10 md:py-40 bg-black/40' ref={ref}>
     {/* Background */}
       <motion.div
         style={{ y }}
@@ -29,8 +29,9 @@ const CaseStudies = () => {
         />
       </motion.div>
       {/* Content */}
-      <section className='flex flex-col items-center justify-center w-full h-[860px] gap-20 z-0 px-[40px] md-[100px]'>
-        <div className='flex h-full max-h-[600px] flex-col w-full justify-center items-center gap-10 max-w-[700px]'>
+      <section className='flex flex-col items-center justify-center w-full gap-20 z-0 px-[40px]  '>
+        <h1 className='title text-white text-center w-full'>Case Studies</h1>
+        <div className='flex h-full flex-col w-full justify-center items-center gap-10 max-w-[700px]'>
           <div className='flex flex-col gap-10 w-full h-full md:flex-row'>
               <Card1
                 image='https://res.cloudinary.com/dgplbptdj/image/upload/v1674703502/Round%20Table/Case1_eujhmc.png'
