@@ -72,10 +72,10 @@ const NavBar = () => {
             className='w-[22px] h-[2px] bg-white'
           ></motion.div>
         </div>
-        <div className='hidden max-w-3/5 gap-20 decoration-none items-center text-black justify-between md:flex'>
+        <div className='hidden max-w-3/5 gap-6 decoration-none items-center text-black justify-between md:flex'>
           <motion.a
             onClick={() => setSignUpOpen(!signUpOpen)}
-            className='p-3 rounded-md border-transparent w-[100px] text-center text-white cursor-pointer'
+            className='p-3 rounded-md border-transparent w-[120px] text-center text-white cursor-pointer'
             whileHover={{
               'background-color': 'rgba(0, 0, 0, 0.2)',
               border: '1px solid rgba(255, 255, 255, 0.4)',
@@ -86,17 +86,30 @@ const NavBar = () => {
           </motion.a>
           <motion.a
             onClick={() => navigate('/about')}
-            className='p-3 rounded-md border-transparent w-[100px] text-center text-white cursor-pointer'
+            className='p-3 rounded-md border-transparent w-[150px] text-center text-white cursor-pointer'
             whileHover={{
               'background-color': 'rgba(0, 0, 0, 0.2)',
               border: '1px solid rgba(255, 255, 255, 0.4)',
               transition: { duration: 0.4, ease: 'easeIn' },
             }}
           >
-            About
+            Our Portfolio
+          </motion.a>
+          <motion.a
+            onClick={() => navigate('/about')}
+            className='p-3 rounded-md border-transparent w-[120px] text-center text-white cursor-pointer'
+            whileHover={{
+              'background-color': 'rgba(0, 0, 0, 0.2)',
+              border: '1px solid rgba(255, 255, 255, 0.4)',
+              transition: { duration: 0.4, ease: 'easeIn' },
+            }}
+          >
+            Our Artist
           </motion.a>
         </div>
-        <Button1 link='https://calendly.com/austin_devs/15-minute-consultation' text='Book A Call'
+        <Button1
+          link='https://calendly.com/austin_devs/15-minute-consultation'
+          text='Book A Call'
         />
       </div>
       <AnimatePresence>

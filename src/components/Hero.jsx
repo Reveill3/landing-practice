@@ -2,6 +2,9 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Button1 from './Button1';
 
+const useParallax = (value, dist) => {
+  return useTransform(value, [0, 1], ['0%', '50%']);
+};
 const Hero = () => {
   const ref = useRef(null);
 
@@ -10,13 +13,9 @@ const Hero = () => {
     offset: ['start start', 'end start'],
   });
 
-  const useParallax = (value, dist) => {
-    return useTransform(value, [0, 1], ['0%', '50%']);
-  };
-
   const y = useParallax(scrollYProgress, 100);
   return (
-    <>
+    <div>
       <motion.div
         style={{ y }}
         className='h-full absolute inset-x-0 top-0 -z-20 mx-auto'
@@ -49,7 +48,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </motion.section>
-    </>
+    </div>
   );
 };
 
