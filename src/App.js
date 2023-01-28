@@ -6,7 +6,7 @@ import Styles from './pages/Styles';
 
 const Layout = () => {
   return (
-    <div className=' flex flex-col'>
+    <div className='flex flex-col justify-between'>
       <NavBar />
       <Outlet />
       <Footer />
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/styles',
         element: <Styles />,
-      }
+      },
     ],
   },
 ]);

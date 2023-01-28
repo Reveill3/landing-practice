@@ -9,7 +9,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, rotateX: 0 }}
         transition={{ ease: 'easeIn', duration: 1.25 }}
         viewport={{ once: true }}
-        className='text-5xl font-bold leading-relaxed text-white max-w-screen-sm mx-auto text-center '
+        className='text-3xl font-bold leading-relaxed text-white max-w-screen-sm mx-auto text-center md:text-5xl'
       >
         We have helped our clients generate over $1,000,000 in revenue
       </motion.h1>
