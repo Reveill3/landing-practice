@@ -36,9 +36,8 @@ const Question = ({ question, answer }) => {
               closed: { opacity: 0, height: 0 },
             }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.5 }}
             animate={showAnswer ? 'open' : 'closed'}
-            className={'paragraph'}
+            className='paragraph'
           >
             {answer}
           </motion.p>
